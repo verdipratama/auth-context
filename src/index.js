@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+import { Provider } from './store';
+import { initialAuthState, authReducer } from './reducers/AuthReducer';
+import Routes from './views/Routes';
+
 function App() {
+  const useAuthState = useReducer(initialAuthState, authReducer);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hey, Good Morning!</h1>
-      </header>
-    </div>
+    <Provider value={useAuthState}>
+      <Routes />
+    </Provider>
   );
 }
 
