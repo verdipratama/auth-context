@@ -60,12 +60,12 @@ const LoginForm = () => {
               name="username"
               value={formData.username}
               onChange={onChange}
-              placeholder="Username"
+              placeholder="verdipratama"
             />
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="123"
               value={formData.password}
               onChange={onChange}
             />
