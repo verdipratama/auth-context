@@ -1,8 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Hey, Good Morning!</h1>
+      </header>
+    </div>
+  );
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
