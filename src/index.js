@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from './store';
-import { initialAuthState, authReducer } from './reducers/AuthReducer';
+import { authReducer, initialAuthState } from './reducers/AuthReducer';
 import Routes from './views/Routes';
 
 function App() {
-  const useAuthState = useReducer(initialAuthState, authReducer);
+  const useAuthState = useReducer(authReducer, initialAuthState);
 
   return (
     <Provider value={useAuthState}>

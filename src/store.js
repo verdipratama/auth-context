@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AUTHCONTEXT = React.createContext({});
+const authContext = React.createContext({});
 
-export const Provider = AUTHCONTEXT.Provider;
-export const Consumer = AUTHCONTEXT.Consumer;
-export default AUTHCONTEXT;
+export const Provider = authContext.Provider;
+export const Consumer = authContext.Consumer;
+export default authContext;
