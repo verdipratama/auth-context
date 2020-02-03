@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class LoginForm extends Component {
-  render() {
-    return (
-      <div>
-        <h1>This is Login form</h1>
-      </div>
-    );
-  }
-}
+const LoginForm = () => {
+  return (
+    <form>
+      <input type="text" name="username" placeholder="Username" />
+      <input type="password" name="password" placeholder="Password" />
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
 
 export default LoginForm;

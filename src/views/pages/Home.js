@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
+import Header from '../components/Header';
+import authContext from '../../store';
 
-export class Home extends Component {
-  render() {
-    return (
-      <div>
-        <h1>This is homepage</h1>
-      </div>
-    );
-  }
-}
+const Home = () => {
+  const [{ isLoggedIn, username }] = useContext(authContext);
+  return (
+    <>
+      <Header>{`Well hello there, ${isLoggedIn ? username : 'Stranger!'}`}</Header>
+    </>
+  );
+};
 
 export default Home;
