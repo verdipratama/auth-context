@@ -5,11 +5,11 @@ import authContext from '../../store';
 
 const Home = () => {
   const [{ isLoggedIn, username }, dispatch] = useContext(authContext);
-  const logOut = () => {
+  function logOut() {
     dispatch({
       type: 'LOGOUT'
     });
-  };
+  }
 
   return (
     <div className="container">
